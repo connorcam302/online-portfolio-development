@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.animation{
+  width: 100%;
+}
+
+paper-button {
+  text-transform: none;
+}
