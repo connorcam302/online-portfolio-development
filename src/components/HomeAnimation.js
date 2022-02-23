@@ -102,8 +102,8 @@ const setup = (p5, canvasParentRef) => {
   // use parent to render the canvas in this ref
   // (without that p5 will render the canvas outside of your component)
 
-  p5.createCanvas(canvWidth, canvHeight);
-
+  let cnv = p5.createCanvas(canvWidth, canvHeight);
+  cnv.parent(canvasParentRef)
 
   logoArray.push(p5.loadImage(clogo));
   logoArray.push(p5.loadImage(javalogo));
@@ -293,8 +293,6 @@ const draw = (p5) => {
   p5.image(logoArray[9],ruby_x,ruby_y,logoWidth,logoHeight)
   p5.image(logoArray[10],sqlite_x,sqlite_y,logoWidth,logoHeight)
   p5.image(logoArray[11],tailwind_x,tailwind_y,logoWidth,logoHeight)
-  
-
 
   if (tailwind_pct > 0.99 && cover_shade < 190){
     cover_shade+=10;
