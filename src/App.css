@@ -1,3 +1,7 @@
+body{
+  background-color: #383838;
+}
+
 .App {
   text-align: center;
 }
@@ -37,6 +41,10 @@
   }
 }
 
+.pageContent{
+  overflow-x: hidden;
+}
+
 paper-button {
   text-transform: none;
 }
@@ -46,22 +54,15 @@ paper-button {
 }
 
 
-
 .ProjectThumbnailImage {
-  background-color: salmon;
   min-height: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .ProjectThumbnailText {
-  background-color: lightgreen;
-  min-height: 100px;
   flex-grow: 1;
-
 }
 .ProjectThumbnailTags {
-  background-color: lightblue;
+
   min-height: 50px;
   padding:5px
 }

@@ -5,11 +5,19 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 
+import { Box, Typography } from '@mui/material/';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import HomeAnimation from './components/HomeAnimation';
 import NavHeader from './components/NavHeader';
 import ProjectThumbnail from './components/ProjectThumbnail';
+
+import AcademicPaperLibrary from './img/academicpaperlibrary.png'
+import WildfireDetection from './img/wildfiredetection.png'
+import FutoshikiGeneration from './img/futoshikigeneration.png'
+import HandwrittenDigitRecognition from './img/handwrittendigitrecognition.png'
+
 
 const THEME = createTheme({
   typography: {
@@ -18,19 +26,13 @@ const THEME = createTheme({
    "fontWeightLight": 300,
    "fontWeightRegular": 400,
    "fontWeightMedium": 500,
-  button: {
-  textTransform: 'none'
-  }
-  },
-  palette: {
-      php: "red",
   }
 });
 
 function App() {
 
   return (
-  <div>
+  <div className="pageContent">
     <ThemeProvider theme={THEME}>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,15 +41,19 @@ function App() {
       <div className='animationContainer'>
         <HomeAnimation className='animationContainer'/>
       </div>
-      {/* <ProjectThumbnail name="Academic Paper Search"/> */}
-      <ScrollMenu className="projectCarosel">
-        <ProjectThumbnail name="Academic Paper Search" php="true" api="true" react="true"/>
-        <ProjectThumbnail name="Academic Paper Search"/>
-        <ProjectThumbnail name="Academic Paper Search"/>
-        <ProjectThumbnail name="Academic Paper Search"/>
-        <ProjectThumbnail name="Academic Paper Search"/>
-        <ProjectThumbnail name="Academic Paper Search"/>
-    </ScrollMenu>
+      <Typography sx={{width:"auto",color:"#fcfcfc",paddingTop:2, marginLeft:10, fontSize:30,'&:hover': {
+            texDecoration: "underline",
+            cursor: "pointer",
+            transition: "0.5s",
+          },}}>
+       Projects<ArrowForwardIosIcon fontSize='30'/>
+      </Typography>
+      <Box sx={{paddingTop:2, borderLeft:"3%",borderRight:"3%", display: 'flex', flexWrap: 'wrap',justifyContent: 'center',}}>
+          <ProjectThumbnail name="Large Futoshiki Generation" image={FutoshikiGeneration} java="true"software="true"/>
+          <ProjectThumbnail name="Academic Paper Search" image={AcademicPaperLibrary} php="true" api="true" react="true" js="true" sqlite="true" software="true" complete="true"/>
+          <ProjectThumbnail name="Wildfire Detection" image={WildfireDetection} php="true" mysql="true" python="true" pi="true"software="true" hardware="true" complete="true"/>
+          <ProjectThumbnail name="Handwritten Digit Recognition" image={HandwrittenDigitRecognition} matlab="true"software="true" ml="true" complete="true"/>
+      </Box>
     </ThemeProvider>
   </div>
   );
