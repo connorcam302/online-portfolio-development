@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import { Box, Typography } from '@mui/material/';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -51,10 +52,10 @@ function HomePage() {
        Projects<ArrowForwardIosIcon fontSize='30'/>
       </Typography>
       <Box sx={{paddingTop:2, borderLeft:"3%",borderRight:"3%", display: 'flex', flexWrap: 'wrap',justifyContent: 'center',}}>
-          <ProjectThumbnail name="Large Futoshiki Generation" image={FutoshikiGeneration} java="true"software="true"/>
-          <ProjectThumbnail name="Academic Paper Search" image={AcademicPaperLibrary} php="true" api="true" react="true" js="true" sqlite="true" software="true" complete="true"/>
-          <ProjectThumbnail name="Wildfire Detection" image={WildfireDetection} php="true" mysql="true" python="true" pi="true"software="true" hardware="true" complete="true"/>
-          <ProjectThumbnail name="Handwritten Digit Recognition" image={HandwrittenDigitRecognition} matlab="true"software="true" ml="true" complete="true"/>
+          <Link className="navText" to="projects/largefutoshikigeneration"><ProjectThumbnail name="Large Futoshiki Generation" image={FutoshikiGeneration} java="true"software="true"/></Link>
+          <Link className="navText" to="projects/academicpapersearch"><ProjectThumbnail name="Academic Paper Search" image={AcademicPaperLibrary} php="true" api="true" react="true" js="true" sqlite="true" software="true" complete="true"/></Link>
+          <Link className="navText" to="projects/wildfiredetection"><ProjectThumbnail name="Wildfire Detection" image={WildfireDetection} php="true" mysql="true" python="true" pi="true"software="true" hardware="true" complete="true"/></Link>
+          <Link className="navText" to="projects/digitrecognition"><ProjectThumbnail name="Handwritten Digit Recognition" image={HandwrittenDigitRecognition} matlab="true"software="true" ml="true" complete="true"/></Link>
       </Box>
   </div>
   );
