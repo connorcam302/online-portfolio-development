@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import Helmet from 'react-helmet';
 
 import { Box, Typography } from '@mui/material/';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -35,10 +36,12 @@ function HomePage() {
 
   return (
   <div className="pageContent">
-    
-    <div className='animationContainer'>
-      <HomeAnimation className='animationContainer'/>
-    </div>
+      <Helmet>
+           <title>Home</title>
+      </Helmet>
+      <Box sx={{boxShadow:10}}>
+        <HomeAnimation className='animationContainer'/>
+      </Box>
       <Typography sx={{width:"auto",color:"#fcfcfc",paddingTop:2, marginLeft:10, fontSize:30,'&:hover': {
             texDecoration: "underline",
             cursor: "pointer",

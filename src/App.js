@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/"
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+
 import "./App.css"
 
 import NavHeader from "./components/NavHeader.js";
+import Footer from "./components/Footer";
 
 import HomePage from "./components/HomePage.js";
 import AboutPage from "./components/AboutPage";
@@ -17,9 +19,16 @@ import DigitRecognition from "./components/DigitRecognitionPage"
 import RPGGame from "./components/RPGGamePage";
 import GameBoyZero from "./components/GameBoyZeroPage"
 import VikingsEsports from "./components/VikingsEsportsPage"
+import ThisWebsite from "./components/ThisWebsitePage";
 import NotFound from "./components/NotFoundPage";
 
 const THEME = createTheme({
+  palette: {
+    primary: {
+      main: "#34ebcc",
+      contrastText: "#000000" //button text white instead of black
+    }
+  },
   typography: {
    "fontFamily": `"Montserrat"`,
    "fontSize": 20,
@@ -50,10 +59,12 @@ export default function App() {
               <Route path="projects/rpggame" element={<RPGGame />} />
               <Route path="projects/gameboyzero" element={<GameBoyZero />} />
               <Route path="projects/vikingsesports" element={<VikingsEsports />} />
+              <Route path="projects/thiswebsite" element={<ThisWebsite />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
+        <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </div>

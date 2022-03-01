@@ -1,9 +1,14 @@
 import { Box, Typography, Grid, Chip } from '@mui/material/';
 import { Carousel } from 'react-responsive-carousel';
 import Image1 from '../img/futoshiki/image1.png'
+import Helmet from 'react-helmet';
 
 function FutoshikiPage() {
     return(
+        <div>
+        <Helmet>
+            <title>Large Futoshiki Generation</title>
+        </Helmet>
         <Box sx={{marginBottom:2,color: "#dedee3", paddingLeft:3,paddingRight:3,marginLeft:"15%",marginRight:"15%", backgroundColor:"#181c29", paddingTop:2, fontFamily:"Montserrat", paddingBottom:4,borderRadius: '0px 0px 30px 30px', boxShadow: 10,}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -38,6 +43,7 @@ function FutoshikiPage() {
                 </Grid>
             </Grid>
         </Box>
+        </div>
     )
 }
 export default FutoshikiPage;

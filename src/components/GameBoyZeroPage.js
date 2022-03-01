@@ -1,5 +1,6 @@
 import { Box, Typography, Grid, Chip } from '@mui/material/';
 import { Carousel } from 'react-responsive-carousel';
+import Helmet from 'react-helmet';
 import Image1 from '../img/gameboyzero/image1.png'
 import Image2 from '../img/gameboyzero/image2.png'
 import Image3 from '../img/gameboyzero/image3.png'
@@ -7,6 +8,10 @@ import Image4 from '../img/gameboyzero/image4.png'
 
 function GameBoyZeroPage() {
     return(
+        <div>
+            <Helmet>
+                <title>GameBoy Zero</title>
+            </Helmet>
         <Box sx={{marginBottom:2, color: "#dedee3", paddingLeft:3,paddingRight:3,marginLeft:"15%",marginRight:"15%", backgroundColor:"#181c29", paddingTop:2, fontFamily:"Montserrat", paddingBottom:4,borderRadius: '0px 0px 30px 30px', boxShadow: 10,}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -39,7 +44,7 @@ function GameBoyZeroPage() {
                 <Grid item xs={5}>
                     <Box sx={{}}>
                         <Typography>
-                            <p>A GameBoy Zero is an emulation device housed inside of an original GameBoy inspired by the original project by <a style={{color: "#34ebcc"}} href="https://sudomod.com/game-boy-zero-custom-parts-guide-part-1/"><u>Wermy</u></a></p>
+                            <p>A GameBoy Zero is an emulation device housed inside of an original GameBoy inspired by the original project by <a style={{color: "#34ebcc"}} href="https://sudomod.com/game-boy-zero-custom-parts-guide-part-1/" target="_blank" rel="noreferrer noopener"><u>Wermy</u></a></p>
                             <p>This project involved modding the casing to fit a larger screen, support Micro-USB charging and 3.5mm AUX audio. The case was fitted with a new PCB that would handle button inputs, a connection to the screen and audio. After this the project was all connected together using a Raspberry Pi Zero running RetroArch.</p>
                             <p>Completing this helped to develop my hardware implementation skills as the PCB involved soldering and interpretation of circuit diagrams, and my software skills in setting up the environment for RetroArch to run in.</p>
                         </Typography>
@@ -54,6 +59,7 @@ function GameBoyZeroPage() {
                 </Grid>
             </Grid>
         </Box>
+        </div>
     )
 }
 export default GameBoyZeroPage;

@@ -1,5 +1,6 @@
 import { Box, Typography, Grid, Chip } from '@mui/material/';
 import { Carousel } from 'react-responsive-carousel';
+import Helmet from 'react-helmet';
 import Image1 from '../img/academicpapersearch/image1.png'
 import Image2 from '../img/academicpapersearch/image2.png'
 import Image3 from '../img/academicpapersearch/image3.png'
@@ -7,6 +8,11 @@ import Image4 from '../img/academicpapersearch/image4.png'
 
 function AcademicPaperSearch() {
     return(
+        <div>
+        <Helmet>
+            <title>Academic Paper Search Website</title>
+        </Helmet>
+    
         <Box sx={{marginBottom:2, color: "#dedee3", paddingLeft:3,paddingRight:3,marginLeft:"15%",marginRight:"15%", backgroundColor:"#181c29", paddingTop:2, fontFamily:"Montserrat", paddingBottom:4,borderRadius: '0px 0px 30px 30px', boxShadow: 10,}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -56,6 +62,7 @@ function AcademicPaperSearch() {
                 </Grid>
             </Grid>
         </Box>
+        </div>
     )
 }
 export default AcademicPaperSearch;

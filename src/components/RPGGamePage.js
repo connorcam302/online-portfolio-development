@@ -1,5 +1,6 @@
 import { Box, Typography, Grid, Chip } from '@mui/material/';
 import { Carousel } from 'react-responsive-carousel';
+import Helmet from 'react-helmet';
 import Image1 from '../img/rpggame/image1.png'
 import Image2 from '../img/rpggame/image2.png'
 import Image3 from '../img/rpggame/image3.png'
@@ -8,6 +9,10 @@ import Image5 from '../img/rpggame/image5.png'
 
 function RPGGame() {
     return(
+        <div>
+        <Helmet>
+           <title>RPG Game Design</title>
+       </Helmet>
         <Box sx={{marginBottom:2, color: "#dedee3", paddingLeft:3,paddingRight:3,marginLeft:"15%",marginRight:"15%", backgroundColor:"#181c29", paddingTop:2, fontFamily:"Montserrat", paddingBottom:4,borderRadius: '0px 0px 30px 30px', boxShadow: 10,}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -56,6 +61,7 @@ function RPGGame() {
                 </Grid>
             </Grid>
         </Box>
+        </div>
     )
 }
 export default RPGGame;

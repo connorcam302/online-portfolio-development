@@ -1,6 +1,7 @@
 import { Button, Box, Typography, Grid, Chip } from '@mui/material/';
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 import Image1 from '../img/digitrecognition/image1.png'
 import Image2 from '../img/digitrecognition/image2.png'
@@ -8,6 +9,10 @@ import PDFFile from '../pdf/EvaluatingMethodsOfHandwrittenDigitRecognitionUsingP
 
 function DigitRecognitionPage() {
     return(
+        <div>
+        <Helmet>
+            <title>Handwritten Digit Recognition</title>
+        </Helmet>
         <Box sx={{marginBottom:2, color: "#dedee3", paddingLeft:3,paddingRight:3,marginLeft:"15%",marginRight:"15%", backgroundColor:"#181c29", paddingTop:2, fontFamily:"Montserrat", paddingBottom:4,borderRadius: '0px 0px 30px 30px', boxShadow: 10,}}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
@@ -33,7 +38,7 @@ function DigitRecognitionPage() {
                     <Box sx={{}}>
                         <Typography>
                             <p>This project was to develop a program that could identify handwritten digits using two different methods, the compare the accuracy of the methods.</p>
-                            <p>Using MatLab, a dataset of handdrawn digits were read and attempted to be recognised then the recognised digit was compared against the actual digit to give an accuracy rating.</p>
+                            <p>Using MatLab, a dataset of handwritten digits was read and attempted to be recognised, the recognised digit was then compared against the actual digit to give an accuracy rating.</p>
                             <p>The two methods being compared were KNN (K-Nearest Neighbour) and SVM (Support Vector Machine). The report of findings can be downloaded below.</p>
                             <Box sx={{textAlign:'center', margin:3}}>
                                 <Link to={PDFFile} target="_blank" download><Button variant="contained" sx={{}}>Download</Button></Link>
@@ -58,6 +63,7 @@ function DigitRecognitionPage() {
                 </Grid>
             </Grid>
         </Box>
+        </div>
     )
 }
 export default DigitRecognitionPage;
