@@ -48,15 +48,6 @@ function AboutPage() {
                     <ul>
                         <li>I still maintain an interest in software development as a hobby, this can be seen in some of the <Link className="navText" to="../projects"><u style={{color: "#34ebcc"}}>projects</u></Link> that I completed outside of academia.</li>
                         <li>I have interests in both gaming and sports.</li>
-                        <li>Some of my favourite games include:
-                            <ul>
-                                <li>Dota 2</li>
-                                <li>Bloodborne</li>
-                                <li>Outer Wilds</li>
-                                <li>Legend of Zelda: Breath of the Wild</li>
-                                <li>Rocket League</li>
-                            </ul>
-                        </li>
                         <li>I frequently go out running, typically every other day.</li>
                         <li>I enjoy watching both football and F1</li>
                     </ul>

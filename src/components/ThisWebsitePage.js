@@ -36,7 +36,7 @@ function ThisWebsite() {
                         <Typography>
                             <p>This project is effectively a portfolio designed to show off past work and my skillset. This website was built using ReactJS and Material UI. The repository for this website can be found below.</p>
                             <Box sx={{textAlign:'center', margin:3}}>
-                                <a href="https://github.com/connorcam302/online-portfolio" target="_blank" download><Button variant="contained" sx={{}}>GitHub Repository</Button></a>
+                                <a href="https://github.com/connorcam302/online-portfolio-development" target="_blank" download><Button variant="contained" sx={{}}>GitHub Repository</Button></a>
                             </Box>
                         </Typography>
                         <Box sx={{textAlign:"center"}}>
