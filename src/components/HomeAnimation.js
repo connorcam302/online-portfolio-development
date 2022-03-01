@@ -32,7 +32,6 @@ let c_y = 0;
 let c_step = 0.01;
 let c_pct = 0.01;
 
-
 let java_x = beginX;
 let java_y = beginY;
 let java_step = 0.01;
@@ -57,7 +56,6 @@ let php_x = beginX;
 let php_y = beginY;
 let php_step = 0.01;
 let php_pct = 0.01;
-
 
 let pi_x = beginX;
 let pi_y = beginY;
@@ -103,7 +101,10 @@ const setup = (p5, canvasParentRef) => {
   // (without that p5 will render the canvas outside of your component)
 
   let cnv = p5.createCanvas(canvWidth, canvHeight);
-  cnv.parent(canvasParentRef)
+  let originParent = cnv.parent()
+  cnv.parent(canvasParentRef);
+
+  originParent.remove();
 
   logoArray.push(p5.loadImage(clogo));
   logoArray.push(p5.loadImage(javalogo));
@@ -121,11 +122,11 @@ const setup = (p5, canvasParentRef) => {
 
 const draw = (p5) => {
   canvWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  canvHeight = canvWidth/3;
+
   p5.resizeCanvas(canvWidth, canvHeight)
   p5.background(28, 28, 28);
 
- 
-  
   let logoWidth = canvWidth/13.5;
   let logoHeight = logoWidth;
 

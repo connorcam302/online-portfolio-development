@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { Typography, Chip } from '@mui/material';
+import Project from "./Project.js"
 
 
 export default function ProjectThumbnail(props) {
@@ -73,59 +74,61 @@ export default function ProjectThumbnail(props) {
   }
   
   return (
-    <Box sx={{marginBottom:5}}>
-      <Box className='ProjectThumbnailContainer'
-        sx={{
-          width: 400,
-          height:400,
-          backgroundColor: '#2E3B55',
-          borderRadius: '0px 0px 10px 10px',
-          verticalAlign: 'text-bottom',
-          marginLeft:3,
-          marginRight:3,
-          boxShadow: 10,
-          '&:hover': {
-            backgroundColor: '#485d87', 
-            cursor: "pointer",
-            transition: "0.5s",
-          },
-        }}
-      >
-        <Box className='ProjectThumbnailImage'>
-          <img src={props.image}></img>
-        </Box>
-        <Box className='ProjectThumbnailText'>
-          <Typography 
+    <div >
+      <Box sx={{marginBottom:5}}>
+        <Box className='ProjectThumbnailContainer'
           sx={{
-            fontSize: 30,
-            padding:1.5,
-            color:"#fcfcfc",
-            textAlign: "center"
-          }}>
-            {props.name}
-          </Typography>
-        </Box>
-        <Box className='ProjectThumbnailTags' >
-          <div className="tags" sx={{ display: 'inline' }}>
-            {php}
-            {java}
-            {js}
-            {matlab}
-            {pi}
-            {mysql}
-            {python}
-            {react}
-            {ruby}
-            {sqlite}
-            {api}
-            {ml}
-            {tailwind}
-            {hardware}
-            {software}
-            {complete}
-          </div>
+            width: 400,
+            height:400,
+            backgroundColor: '#2E3B55',
+            borderRadius: '0px 0px 10px 10px',
+            verticalAlign: 'text-bottom',
+            marginLeft:3,
+            marginRight:3,
+            boxShadow: 10,
+            '&:hover': {
+              backgroundColor: '#485d87', 
+              cursor: "pointer",
+              transition: "0.5s",
+            },
+          }}
+        >
+          <Box className='ProjectThumbnailImage'>
+            <img src={props.image}></img>
+          </Box>
+          <Box className='ProjectThumbnailText'>
+            <Typography 
+            sx={{
+              fontSize: 30,
+              padding:1.5,
+              color:"#fcfcfc",
+              textAlign: "center"
+            }}>
+              {props.name}
+            </Typography>
+          </Box>
+          <Box className='ProjectThumbnailTags'>
+            <div className="tags" sx={{ display: 'inline'}}>
+              {php}
+              {java}
+              {js}
+              {matlab}
+              {pi}
+              {mysql}
+              {python}
+              {react}
+              {ruby}
+              {sqlite}
+              {api}
+              {ml}
+              {tailwind}
+              {hardware}
+              {software}
+              {complete}
+            </div>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </div>
   );
 }
