@@ -75,3 +75,7 @@ img {
 .chip{
   padding: 10px;
 }
+
+a:link {
+  text-decoration: none;
+}

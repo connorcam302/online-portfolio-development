@@ -11,7 +11,7 @@ function AcademicPaperSearch() {
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Box sx={{fontSize: 54,padding:1.5,color:"#fcfcfc",textAlign: "center"}}>
-                        Large Futoshiki Generation
+                    Academic Paper Search Website
                     </Box>
                 </Grid>
                 <Grid item xs={7}>

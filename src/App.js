@@ -13,6 +13,10 @@ import ProjectsPage from "./components/ProjectsPage";
 import FutoshikiPage from "./components/FutoshikiPage";
 import AcademicPaperSearch from "./components/AcademicPaperSearchPage";
 import WildfireDetection from "./components/WildfireDetection";
+import DigitRecognition from "./components/DigitRecognitionPage"
+import RPGGame from "./components/RPGGamePage";
+import GameBoyZero from "./components/GameBoyZeroPage"
+import VikingsEsports from "./components/VikingsEsportsPage"
 import NotFound from "./components/NotFoundPage";
 
 const THEME = createTheme({
@@ -42,6 +46,10 @@ export default function App() {
               <Route path="projects/largefutoshikigeneration" element={<FutoshikiPage />} />
               <Route path="projects/academicpapersearch" element={<AcademicPaperSearch />} />
               <Route path="projects/wildfiredetection" element={<WildfireDetection />} />
+              <Route path="projects/digitrecognition" element={<DigitRecognition />} />
+              <Route path="projects/rpggame" element={<RPGGame />} />
+              <Route path="projects/gameboyzero" element={<GameBoyZero />} />
+              <Route path="projects/vikingsesports" element={<VikingsEsports />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
