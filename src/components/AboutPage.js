@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
 function AboutPage() {
+
+    var today = new Date();
+    var birthDate = new Date("2000-04-05");
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
     return(
         <div>
         <Helmet>
@@ -18,8 +27,9 @@ function AboutPage() {
                 </Box>
                 <Box sx={{}}>
                     <ul>
-                        <li>My name is Connor and I'm 21 years old </li>
-                        <li>I go to Northumbria University and I'm a final year Computer Science undergraduate.</li>
+                        <li>My name is Connor and I'm {age} years old </li>
+                        <li>I'm a BSc Computer Science who graduated from Northumbria University with First Class Honours in 2022.</li>
+                        <li>I currently am a Program & Project Mgmt Associate at Accenture, working on software development projects.</li>
                     </ul>
                 </Box>
                 <Box sx={{fontSize: 32,padding:1.5,color:"#fcfcfc"}}>
@@ -46,10 +56,10 @@ function AboutPage() {
                 </Box>
                 <Box sx={{}}>
                     <ul>
-                        <li>I still maintain an interest in software development as a hobby, this can be seen in some of the <Link className="navText" to="../projects"><u style={{color: "#34ebcc"}}>projects</u></Link> that I completed outside of academia.</li>
+                        <li>I still maintain an interest in software development as a hobby, this can be seen in some of the <Link className="navText" to="../projects"><u style={{color: "#34ebcc"}}>projects</u></Link> that I have completed outside of academia.</li>
                         <li>I have interests in both gaming and sports.</li>
                         <li>I frequently go out running, typically every other day.</li>
-                        <li>I enjoy watching both football and F1</li>
+                        <li>I enjoy watching both football and F1.</li>
                     </ul>
                 </Box>
                 <Box sx={{fontSize: 32,padding:1.5,color:"#fcfcfc"}}>
